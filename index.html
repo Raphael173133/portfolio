@@ -4,109 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio - Jone Lee</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #121212;
-      color: rgb(228, 215, 215);
-    }
+  <link rel="stylesheet" href="style.css">
 
-    header, section {
-      padding: 40px 60px;
-    }
-
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      color: white;
-    }
-
-    .hero h1 span {
-      color: #f81f01;
-    }
-
-    .hero p {
-      max-width: 600px;
-      color: #ccc;
-    }
-
-    .hero img {
-      border-radius: 10px;
-      max-width: 300px;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background-color: #464141;
-      padding: 20px;
-      border-radius: 12px;
-      color: white;
-      box-shadow: 0 4px 12px rgba(189, 125, 125, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(175, 151, 151, 0.6);
-    }
-
-    .card h3 {
-      margin: 10px 0;
-      min-height: 48px; /* pour aligner les titres */
-    }
-
-    .card p {
-      flex-grow: 1;
-      margin: 0;
-    }
-
-    .portfolio img {
-      width: 100%;
-      border-radius: 10px;
-      height: 150px;
-      object-fit: cover;
-    }
-
-    nav {
-      background-color: #1a1a1a;
-      padding: 10px 60px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-    }
-
-    .cta-button {
-      background-color: #f81f01;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-  </style>
 </head>
 <body>
 
@@ -121,23 +20,27 @@
     </div>
   </nav>
 
-  <header class="hero">
-    <div>
-      <p>WELCOME TO MY WORLD</p>
-      <h1>Hi, I’m <span>Jone Lee</span><br/>a UI/UX Designer</h1>
-      <p>I use minimalism as a mind dimension by which to simplify experiences.<br>UX designer passionate about user experience and interface ergonomics. Creative, rigorous, and organized, I enjoy working in a team to deliver innovative solutions.</p>
-    </div>
-    <style></style>
-        <img src="man.png" alt="Jone Lee" /> 
-  </header>
-<section>
+ <header class="hero">
+  <div>
+    <p>WELCOME TO MY WORLD</p>
+    <h1>Hi, I’m <span>Jone Lee</span><br/>a UI/UX Designer</h1>
+    <p>
+      I use minimalism as a mind dimension by which to simplify experiences.<br>
+      UX designer passionate about user experience and interface ergonomics.
+      Creative, rigorous, and organized, I enjoy working in a team to deliver innovative solutions.
+    </p>
+  </div>
 
-       
-        
+  <!-- Conteneur card relative -->
+  <div class="card-container">
+    <div class="card-behind">
+         </div>
+    <img src="man.png" alt="Jone Lee" class="man-image" />
+  </div>
+</header>
 
-</section>
 
-
+           
   <!-- Section: What I Do -->
   <section>
     <h2 class="section-title">What I Do</h2>
@@ -182,8 +85,9 @@
       <div class="card">
         <img src="mob1.jpg" alt="NFT Dashboard">
         <h3>NFT Dashboard</h3>
-        <p>Visualize your NFT performance with real-time analytics.</p>
-      </div>
+          <p>Discover and explore the non-fungible token (NFT) ecosystem on the Solana blockchain.</p>
+
+            </div>
       <div class="card">
         <img src="food.webp" alt="Food Delivery App">
         <h3>Food Delivery App</h3>
@@ -211,84 +115,6 @@
       </div>
     </div>
   </section>
-<style>
-.portfolio img {
-  width: 128px;
-  height: 128px;
-  border-radius: 10px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-}
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-@media (max-width: 900px) {
-  header, section {
-    padding: 20px 30px;
-  }
-
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero img {
-    max-width: 80%;
-    margin-top: 20px;
-  }
-
-  nav {
-    flex-direction: column;
-    padding: 10px 20px;
-  }
-
-  nav div:last-child {
-    margin-top: 10px;
-  }
-
-  nav a {
-    margin-left: 0;
-    margin-right: 15px;
-    display: inline-block;
-    margin-bottom: 5px;
-  }
-}
-
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-
-  .portfolio {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    padding: 15px;
-  }
-
-  .card h3 {
-    min-height: auto;
-    margin: 8px 0;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    max-width: 100%;
-  }
-}
 
 
 
