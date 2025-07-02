@@ -4,18 +4,9 @@
 * {
   box-sizing: border-box;
 }
-
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #121212;
-  color: #e4d7d7;
-  line-height: 1.5;
-}
-
 /* NAVBAR */
 nav {
-  background-color: #1a1a1a;
+  background-color: #1a1a1a00;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,19 +67,8 @@ header.hero h1 span {
   color: #f81f01;
 }
 
-.center-image {
-  flex: 1 1 300px;
-  max-width: 300px;
-  display: flex;
-  justify-content: center;
-}
 
-.center-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: contain;
-}
+
 
 /* SECTIONS */
 section {
@@ -158,9 +138,7 @@ section {
     padding: 15px 30px;
   }
 
-  nav div:last-child a {
-    margin-left: 15px;
-  }
+ 
 
   header.hero {
     flex-direction: column;
@@ -200,13 +178,7 @@ section {
     margin: 0 10px 10px 0;
   }
 
-  header.hero h1 {
-    font-size: 1.8rem;
-  }
-
-  header.hero p {
-    max-width: 100%;
-  }
+ 
 
   .portfolio {
     grid-template-columns: 1fr;
@@ -230,21 +202,8 @@ section:nth-of-type(1) .portfolio .card img {
     height: auto;
   }
 }       
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem;
-  position: relative;
-}
 
 
-.card-behind {
-  position: relative; /* la card est relative */
-  z-index: 1;
-  height: 100%;
-}
 
 .man-image {
   position: absolute; /* image au-dessus */
@@ -257,3 +216,110 @@ section:nth-of-type(1) .portfolio .card img {
   box-shadow: 0 8px 20px rgba(197, 189, 189, 0.6);
 }
 
+/* Reset simple */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #3d3b3b;
+  color: #333;
+  line-height: 1.6;
+  padding: 0 15px;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+
+.hero > div:first-child {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+.hero p, .hero h1 {
+  margin: 0 0 15px 0;
+}
+
+.hero h1 span {
+  color: #f6f8fc;
+}
+
+.card-container {
+  flex: 1 1 300px;
+  min-width: 280px;
+  position: relative;
+  
+  border-radius: 12px;
+  padding: 20px;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: visible;
+  min-height: 200px;
+}
+
+.man-image {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-height: 60vh; 
+}
+
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 280px;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.card h3 {
+  margin: 10px 0 8px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #eff1f3;
+}
+
+/* Responsive */
